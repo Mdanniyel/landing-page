@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slide-top {
+  animation: slide-top 40s linear infinite both;
+}
+
+.slide-top-2 {
+  animation: slide-top 10s linear infinite both;
+}
+
+@keyframes slide-top {
+  100% {
+    transform: translateY(-50%);
+  }
+}
