@@ -3,90 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="build.css" rel="stylesheet" />
+    <!-- <link href="build.css" rel="stylesheet" /> -->
+    <link href="dist/output.css" rel="stylesheet" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Hebrew:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body x-data class="">
-    <!-- Hero -->
-    <section class="relative h-screen">
-      <div
-        class="relative flex h-full flex-col justify-between space-x-1.5 md:flex-row-reverse"
-      >
-        <div
-          class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-        ></div>
+  <body x-data class="font-noto">
+    <div  class="h-20 bg-black"></div>
+    
+    <section x-html="loadPartial('hero-section')"></section>
+    <section x-html="loadPartial('about-section')"></section>
 
-        <div class="px-3 grow overflow-hidden">
-          <div x-data class="slide-top">
-            <template x-for="i in 2">
-              <template x-for="i in 11">
-                <div class="py-8">
-                  <img
-                    :src="`src/assets/images/המלצות-שיעורים-פרטיים-${i}.png`"
-                    class="rounded-2xl shadow-lg shadow-red-200/50"
-                  />
-                </div>
-              </template>
-            </template>
-          </div>
-        </div>
+    
 
-        <div class="px-3 hidden grow overflow-hidden lg:block">
-          <div x-data class="slide-top">
-            <template x-for="i in 2">
-              <template x-for="i in 10">
-                <div class="py-8">
-                  <img
-                    :src="`src/assets/images/המלצות-שיעורים-פרטיים-${i+11}.png`"
-                    class="rounded-2xl shadow-lg shadow-red-200/50"
-                  />
-                </div>
-              </template>
-            </template>
-          </div>
-        </div>
-
-        <div class="px-3 hidden grow overflow-hidden xl:block">
-          <div x-data class="slide-top">
-            <template x-for="i in 2">
-              <template x-for="i in 8">
-                <div class="py-8">
-                  <img
-                    :src="`src/assets/images/המלצות-שיעורים-פרטיים-${i+22}.png`"
-                    class="rounded-2xl shadow-lg shadow-red-200/50"
-                  />
-                </div>
-              </template>
-            </template>
-          </div>
-        </div>
-
-        <div class="self-center text-xl">
-          <div class="text-center text-white">
-            <h1 class="text-3xl">עשור של ניסיון</h1>
-            <p>
-              אחרי מאות תלמידים ועשור של ניסיון, אני יכול להגיד בבטחון שאני יודע
-              ללמד כל תלמיד איך להצליח במבחנים ובכיתה. כל תלמיד יכול להצליח
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-neutral-950"
-      ></div>
-      <div
-        class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-neutral-900"
-      ></div>
-    </section>
-    <!-- End Hero -->
-
-    <section class="relative h-screen">
-        <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-    </section>
+    <script>
+      async function loadPartial(partial) {
+        const response = await fetch(`/src/partials/${partial}.html`);
+        return await response.text();
+      }
+    </script>
 
     <script src="./node_modules/preline/dist/preline.js"></script>
   </body>

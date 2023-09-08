@@ -1,0 +1,92 @@
+<!-- Hero -->
+<div class="relative -mt-16 h-screen rounded-t-3xl bg-white">
+  <div
+    class="relative flex h-full flex-col justify-between space-x-1.5 md:flex-row-reverse"
+  >
+    <!-- text and bottens -->
+    <div class="mx-2.5 mt-3 self-center">
+      <div class="text-center">
+        <h1
+          class="mb-5 bg-gradient-to-r from-stone-900 to-stone-700 bg-clip-text text-3xl font-bold tracking-wider text-transparent"
+        >
+          מורה אישי להצלחה
+        </h1>
+        <p class="text-center text-lg font-light tracking-wide">
+          אחרי מאות תלמידים ועשור של ניסיון, אני יכול להגיד בבטחון שאני יודע
+          ללמד כל תלמיד איך להצליח במבחנים ובכיתה. כל תלמיד יכול להצליח
+        </p>
+      </div>
+      <div
+        class="flex justify-center gap-3.5 mt-4 text-center text-3xl"
+      >
+        <button
+          type="button"
+          class="grow rounded-lg border border-black bg-gradient-to-r from-stone-900 to-stone-800 py-1.5 text-white hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
+        >
+          <i class="fa fa-phone"></i>
+        </button>
+        <button
+          type="button"
+          class="grow rounded-lg border border-black py-1.5 hover:bg-gradient-to-br focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
+        >
+          <i class="fa fa-whatsapp"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="relative flex overflow-hidden my-4">
+      <div class="grow overflow-hidden px-3">
+        <div x-data class="slide-top">
+          <template x-for="i in 2">
+            <template x-for="i in 11">
+              <div class="py-8">
+                <img
+                  :src="`src/assets/images/המלצות-שיעורים-פרטיים-${i}.png`"
+                  class="rounded-2xl shadow-lg shadow-black/50"
+                />
+              </div>
+            </template>
+          </template>
+        </div>
+      </div>
+
+      <div class="hidden grow overflow-hidden px-3 lg:block">
+        <div x-data class="slide-top">
+          <template x-for="i in 2">
+            <template x-for="i in 10">
+              <div class="py-8">
+                <img
+                  :src="`src/assets/images/המלצות-שיעורים-פרטיים-${i+11}.png`"
+                  class="rounded-2xl shadow-lg shadow-black/50"
+                />
+              </div>
+            </template>
+          </template>
+        </div>
+      </div>
+
+      <div class="hidden grow overflow-hidden px-3 xl:block">
+        <div x-data class="slide-top">
+          <template x-for="i in 2">
+            <template x-for="i in 8">
+              <div class="py-8">
+                <img
+                  :src="`src/assets/images/המלצות-שיעורים-פרטיים-${i+22}.png`"
+                  class="rounded-2xl shadow-lg shadow-black/50"
+                />
+              </div>
+            </template>
+          </template>
+        </div>
+      </div>
+
+      <div
+        class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white"
+      ></div>
+      <div
+        class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white"
+      ></div>
+    </div>
+  </div>
+</div>
+<!-- End Hero -->
