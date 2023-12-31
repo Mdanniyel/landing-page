@@ -1,41 +1,152 @@
 <!doctype html>
 <html dir="rtl" lang="he">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="דניאל|מורה אישי להצלחה" />
-    <title>דניאל|מורה אישי להצלחה</title>
-    <!-- <link href="build.css" rel="stylesheet" /> -->
-    <link href="dist/output.css" rel="stylesheet" />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Hebrew:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body x-data class="font-noto">
-    <div  class="h-20 bg-black"></div>
-    
-    <section x-html="loadPartial('hero-section')"></section>
-    <section x-html="loadPartial('about-section')"></section>
 
-    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="דניאל|מורה אישי להצלחה" />
+  <title>דניאל|מורה אישי להצלחה</title>
+  <!-- <link href="build.css" rel="stylesheet" /> -->
+  <link href="dist/output.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <script>
-      async function loadPartial(partial) {
-        const response = await fetch(`/landing-page/src/partials/${partial}.html`);
-        return await response.text();
-      }
-    </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Hebrew:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-    <script src="./node_modules/preline/dist/preline.js"></script>
-  </body>
+<body x-data class="font-noto">
+  <div class="h-20 bg-black"></div>
+
+  <section>
+    <!-- Hero -->
+    <div class="relative -mt-16 h-screen rounded-t-3xl bg-white">
+      <div class="relative flex h-full flex-col justify-between space-x-1.5 md:flex-row-reverse">
+        <!-- text and bottens -->
+        <div class="mx-2.5 mt-3 self-center">
+          <div class="mt-7 text-center">
+            <h1
+              class="mb-5 bg-gradient-to-r from-stone-900 to-stone-700 bg-clip-text text-3xl font-bold tracking-wider text-transparent">
+              מורה אישי להצלחה
+            </h1>
+            <p class="text-center text-lg font-light tracking-wide">
+              אחרי מאות תלמידים ועשור של ניסיון, אני יכול להגיד בבטחון שאני יודע
+              ללמד כל תלמיד איך להצליח במבחנים ובכיתה. כל תלמיד יכול להצליח
+            </p>
+          </div>
+          <div class="mt-4 flex justify-center gap-3.5 text-center text-3xl">
+            <button type="button"
+              class="grow rounded-lg border border-black bg-gradient-to-r from-stone-900 to-stone-800 py-1.5 text-white hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
+              <i class="fa fa-phone"></i>
+            </button>
+            <button type="button"
+              class="grow rounded-lg border border-black py-1.5 hover:bg-gradient-to-br focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800">
+              <i class="fa fa-whatsapp"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="relative my-4 flex overflow-hidden">
+          <div class="grow overflow-hidden px-3">
+            <div x-data class="slide-top">
+              <template x-for="i in 2">
+                <template x-for="i in 11">
+                  <div class="py-8">
+                    <img :src="`src/assets/images/webp/המלצות-שיעורים-פרטיים-${i}.webp`"
+                      class="rounded-2xl shadow-lg shadow-black/50" />
+                  </div>
+                </template>
+              </template>
+            </div>
+          </div>
+
+          <div class="hidden grow overflow-hidden px-3 lg:block">
+            <div x-data class="slide-top">
+              <template x-for="i in 2">
+                <template x-for="i in 10">
+                  <div class="py-8">
+                    <img :src="`src/assets/images/webp/המלצות-שיעורים-פרטיים-${i+11}.webp`"
+                      class="rounded-2xl shadow-lg shadow-black/50" />
+                  </div>
+                </template>
+              </template>
+            </div>
+          </div>
+
+          <div class="hidden grow overflow-hidden px-3 xl:block">
+            <div x-data class="slide-top">
+              <template x-for="i in 2">
+                <template x-for="i in 8">
+                  <div class="py-8">
+                    <img :src="`src/assets/images/webp/המלצות-שיעורים-פרטיים-${i+22}.webp`"
+                      class="rounded-2xl shadow-lg shadow-black/50" />
+                  </div>
+                </template>
+              </template>
+            </div>
+          </div>
+
+          <div class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white"></div>
+          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white"></div>
+        </div>
+      </div>
+    </div>
+    <!-- End Hero -->
+
+  </section>
+
+  <!-- About -->
+  <section>
+    <div class="relative -mt-14 rounded-3xl bg-black px-8 py-20 text-white">
+      <div class="pb-12">
+        <h2 class="text-center text-4xl font-extrabold tracking-tighter">
+          הדרך שלי
+        </h2>
+      </div>
+      <div class="text-justify leading-relaxed tracking-wide max-w-lg mx-auto">
+        <p>
+          הצלחה בפיזיקה דורשת תרגול וזה גם היתרון המרכזי בשיעורים פרטניים. התלמיד או
+          התלמידה לא רק צופים בשיעור אלא לוקחים בו חלק פעיל ובזמן שהם מתרגלים אני
+          איתם כדי לחזק את מה שנכון ולתקן את מה שאינו נכון. בתחילת הלימוד עם התלמיד
+          או התלמידה אני קודם כל מנסה לזהות את הבעיה או הקשיים שיש להם, מהניסיון שלי
+          לעיתים מדובר בקושי "אמיתי" ולעיתים מדובר בקשיים משניים שמשפיעים על היכולות
+          של התלמיד או התלמידה. למשל ישנם תלמידים שלא תרגלו מספיק או שלא תרגלו עם
+          מישהו שיוכל לכוון אותם וכתוצאה מכך העבודה שלהם מרושלת או שהם מתקשים להבין
+          נושאים שהם יותר מורכבים בפיזיקה - זו דוגמה לקושי אמיתי. דוגמה נוספת היא
+          כשאני מזהה שהתלמיד או התלמידה חשים חוסר ביטחון בלימוד, חוסר ביטחון היא
+          בעיה מוכרת ונפוצה בכל שלבי הלימוד. לעיתים חוסר הביטחון נובע מחוויה שלילית
+          במהלך הלימוד. זה יכול לנבוע מיחס לקוי של המורה בבית ספר (מבלי חלילה לבקר
+          את צוות ההוראה, לימוד בכיתה מלאת תלמידים היא משימה קשה. לרוב, למורה אין
+          יכולת להיות קשוב באמת לכל תלמיד ותלמידה), מלבד יחסי מורה-תלמיד גם חוסר
+          תרגול נכון יכול להוביל להרגשת חוסר ביטחון אצל התלמידים. חוסר ביטחון הוא
+          דוגמה לקושי עקיף שפוגע ישירות ביכולות של התלמיד או התלמידה וישפיעו בוודאות
+          על הציונים שלהם לרעה.
+        </p>
+        <p class="mt-6">
+          לאחר שאני מזהה את הקושי או הקשיים של התלמידים אנחנו עובדים ביחד ומתמקדים
+          בכל מה שצריך חיזוק.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- End About -->
+
+
+
+  <script>
+    async function loadPartial(partial) {
+      const response = await fetch(`/landing-page/src/partials/${partial}.html`);
+      return await response.text();
+    }
+  </script>
+
+  <script src="./node_modules/preline/dist/preline.js"></script>
+</body>
+
 </html>
