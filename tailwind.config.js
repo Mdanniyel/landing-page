@@ -7,7 +7,11 @@ module.exports = {
       heebo: ['Heebo', 'sans-serif'],
       noto: ['Noto Sans Hebrew', 'sans-serif']
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '18': '4.5rem',
+      }
+    },
   },
   plugins: [require('preline/plugin')],
 }

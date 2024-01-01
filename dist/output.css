@@ -792,14 +792,14 @@ video {
   margin-right: 0.625rem;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .-mt-14 {
@@ -953,8 +953,8 @@ video {
   height: 4rem;
 }
 
-.h-20 {
-  height: 5rem;
+.h-18 {
+  height: 4.5rem;
 }
 
 .h-32 {
@@ -1007,10 +1007,6 @@ video {
 
 .w-\[weird-and-invalid\] {
   width: weird-and-invalid;
-}
-
-.max-w-screen-sm {
-  max-width: 640px;
 }
 
 .max-w-lg {
