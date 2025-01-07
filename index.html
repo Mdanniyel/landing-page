@@ -8,6 +8,7 @@
   <title>דניאל|מורה אישי להצלחה</title>
   <!-- <link href="build.css" rel="stylesheet" /> -->
   <link href="dist/output.css" rel="stylesheet" />
+  <link rel="preload" href="dist/output.css" as="style" />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -59,7 +60,7 @@
                 <template x-for="i in 11">
                   <div class="py-8">
                     <img :src="`src/assets/images/webp/המלצות-שיעורים-פרטיים-${i}.webp`"
-                      class="rounded-2xl shadow-lg shadow-black/50" />
+                      class="rounded-2xl shadow-lg shadow-black/50" width="150" height="150" />
                   </div>
                 </template>
               </template>
@@ -72,7 +73,7 @@
                 <template x-for="i in 10">
                   <div class="py-8">
                     <img :src="`src/assets/images/webp/המלצות-שיעורים-פרטיים-${i+11}.webp`"
-                      class="rounded-2xl shadow-lg shadow-black/50" />
+                      class="rounded-2xl shadow-lg shadow-black/50" width="150" height="150" />
                   </div>
                 </template>
               </template>
@@ -85,7 +86,7 @@
                 <template x-for="i in 8">
                   <div class="py-8">
                     <img :src="`src/assets/images/webp/המלצות-שיעורים-פרטיים-${i+22}.webp`"
-                      class="rounded-2xl shadow-lg shadow-black/50" />
+                      class="rounded-2xl shadow-lg shadow-black/50" width="150" height="150" />
                   </div>
                 </template>
               </template>
